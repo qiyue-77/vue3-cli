@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/", // 指定输出目录
+    "module": "esnext", // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
+    "target": "esnext", // 目标语言的版本
+    "strict": true, // 开启所有严格的类型检查
+    "jsx": "preserve", // 支持jsx语法
+    "sourceMap": true, // 生成相应的 '.map' 文件
+    "moduleResolution": "node", // 选择模块解析策略： 'node' (Node.js) or 'classic' (TypeScript pre-1.6)
+    "importHelpers": true, // 从 tslib 导入辅助工具函数
+    "baseUrl": ".", // 解析非相对模块名的基准目录
+    "experimentalDecorators": true, // 启用装饰器
+    "skipLibCheck": true,
+    "esModuleInterop": true, // 允许export=导出，由import from 导入
+    "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入。
+    // "types": ["node", "webpack-env"],
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"] // 编译过程中需要引入的库文件的列表
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+    "src/utils/calendar.js"
+  ],
+  "exclude": ["node_modules"]
+}
